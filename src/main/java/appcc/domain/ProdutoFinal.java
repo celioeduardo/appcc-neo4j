@@ -22,7 +22,7 @@ public class ProdutoFinal {
 		return produtoFinalId;
 	}
 
-	//@Relationship(type = "SAI",  direction = Relationship.INCOMING)
+	@Relationship(type = "SAI",  direction = Relationship.OUTGOING)
 	List<Etapa> saiDe;
 
 	public Long getId() {

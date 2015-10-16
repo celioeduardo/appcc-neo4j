@@ -30,7 +30,7 @@ public interface EtapaRepository
 	    List<Map<String,Object>> todasEtapas();
 	    
 	    @Transactional(readOnly=true)
-//	    @Query("MATCH p=(e:Etapa)-[:PRODUZ]->(s)-[:ENTRA|PROXIMA*]->(x) RETURN p")
+	    //@Query("MATCH p=(e:Etapa)-[:PRODUZ]->(s)-[:ENTRA|PROXIMA*]->(x) RETURN p")
 	    @Query("MATCH (e:Etapa)-[p:PRODUZ]->(s) RETURN e,s")
 	    List<Etapa> todasEtapasTipadas();
 	    

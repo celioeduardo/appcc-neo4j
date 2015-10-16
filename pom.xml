@@ -30,9 +30,8 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-neo4j</artifactId>
-            <version>${spring-data-neo4j.version}</version>
+            <version>${spring-data-neo4j.version}</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -51,10 +50,6 @@
             <artifactId>jackson-jsog</artifactId>
             <version>1.1</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-        	<groupId>org.springframework.data</groupId>
-        	<artifactId>spring-data-neo4j</artifactId>
         </dependency>
         
     </dependencies>
