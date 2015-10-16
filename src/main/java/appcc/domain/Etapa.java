@@ -21,21 +21,24 @@ public class Etapa {
 	private String fluxoNome;
 	private Integer origens;
 	
-	@Relationship(type = "PROXIMA")
+	@Relationship(type = "PROXIMA", direction = Relationship.OUTGOING)
 	Etapa proxima;
 	
-	@Relationship(type = "RECEBE")
+	@Relationship(type = "PROXIMA", direction = Relationship.INCOMING)
+	Etapa anterior;
+	
+	@Relationship(type = "RECEBE", direction = Relationship.OUTGOING)
 	List<Subproduto> subprodutosEntrada;
 	
-	@Relationship(type = "RECEBE")
+	@Relationship(type = "RECEBE", direction = Relationship.OUTGOING)
 	List<Material> materiais;
 	
-	@Relationship(type = "PRODUZ")
+	@Relationship(type = "PRODUZ", direction = Relationship.OUTGOING)
 	List<Subproduto> subprodutosSaida;
 	
-	@Relationship(type = "PRODUZ")
+	@Relationship(type = "PRODUZ", direction = Relationship.OUTGOING)
 	List<ProdutoFinal> produtosFinais;
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -78,6 +81,10 @@ public class Etapa {
 
 	public List<ProdutoFinal> getProdutosFinais() {
 		return produtosFinais;
+	}
+
+	public Etapa getAnterior() {
+		return anterior;
 	}
 		
 }

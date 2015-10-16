@@ -24,6 +24,13 @@ public class ProdutoFinal {
 
 	@Relationship(type = "SAI",  direction = Relationship.OUTGOING)
 	List<Etapa> saiDe;
+	
+	@Relationship(type = "PRODUZ",  direction = Relationship.INCOMING)
+	List<Etapa> produzidoPor;
+
+	public List<Etapa> getProduzidoPor() {
+		return produzidoPor;
+	}
 
 	public Long getId() {
 		return id;

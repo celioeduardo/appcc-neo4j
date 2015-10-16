@@ -1,7 +1,5 @@
 package appcc.repositories;
 
-import java.util.Collection;
-
 import org.springframework.data.neo4j.annotation.Query;
 import org.springframework.data.neo4j.repository.GraphRepository;
 import org.springframework.data.repository.query.Param;
